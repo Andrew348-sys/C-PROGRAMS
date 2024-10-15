@@ -63,7 +63,7 @@ void calculateBill(int unitConsumed, float *chargePerUnit, float *totalBill) {
 }
 
 void displayBill(char customerID[], char customerName[], int unitConsumed, float chargePerUnit, float totalAmount) {
-    printf("\n--- Electricity Bill ---\n");
+    printf("\n--- Total Electricity Bill ---\n");
     printf("Customer ID: %s\n", customerID);
     printf("Customer Name: %s\n", customerName);
     printf("Units Consumed: %d\n", unitConsumed);

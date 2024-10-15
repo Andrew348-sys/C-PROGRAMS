@@ -4,29 +4,6 @@ Course: Computer System Engineering*/
 
 #include <stdio.h>
 
-
-void getCustomerInfo(char customerID[], char customerName[], int *unitConsumed);
-void calculateBill(int unitConsumed, float *chargePerUnit, float *totalBill);
-void displayBill(char customerID[], char customerName[], int unitConsumed, float chargePerUnit, float totalAmount);
-
-int main() {
-    char customerID[20];
-    char customerName[50];
-    int unitConsumed;
-    float chargePerUnit, totalAmount;
-
-    
-    getCustomerInfo(customerID, customerName, &unitConsumed);
-
-    
-    calculateBill(unitConsumed, &chargePerUnit, &totalAmount);
-
-    
-    displayBill(customerID, customerName, unitConsumed, chargePerUnit, totalAmount);
-
-    return 0;
-}
-
 void getCustomerInfo(char customerID[], char customerName[], int *unitConsumed) {
     printf("Enter Customer ID: ");
     scanf("%s", customerID);
@@ -69,4 +46,23 @@ void displayBill(char customerID[], char customerName[], int unitConsumed, float
     printf("Units Consumed: %d\n", unitConsumed);
     printf("Charges per Unit: Ksh %.2f\n", chargePerUnit);
     printf("Total Amount to Pay: Ksh %.2f\n", totalAmount);
+}
+
+
+int main() {
+    char customerID[20];
+    char customerName[50];
+    int unitConsumed;
+    float chargePerUnit, totalAmount;
+
+    
+    getCustomerInfo(customerID, customerName, &unitConsumed);
+
+    
+    calculateBill(unitConsumed, &chargePerUnit, &totalAmount);
+
+    
+    displayBill(customerID, customerName, unitConsumed, chargePerUnit, totalAmount);
+
+    return 0;
 }
